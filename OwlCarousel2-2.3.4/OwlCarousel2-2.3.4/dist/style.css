@@ -1,0 +1,33 @@
+.carre{
+    width: 5.5vw;
+    height: 5.5vw;
+}
+
+.rouge{
+    background: red;
+}
+
+.bleu{
+    background: blue;
+}
+
+.owl-carousel{
+    overflow: hidden;
+}
+
+/*.owl-item{
+    width : 20%;
+}*/
+
+.owl-stage-outer{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.owl-stage{
+    /*width: 3400px !important;*/
+}
+
+.owl-carousel .owl-item {
+    /*width: 8vh !important;*/
+}
