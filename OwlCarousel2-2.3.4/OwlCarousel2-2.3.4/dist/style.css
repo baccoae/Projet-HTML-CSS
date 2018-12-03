@@ -1,6 +1,27 @@
 .carre{
-    width: 5.5vw;
-    height: 5.5vw;
+    width: 5.8vw;
+    height: 5.8vw;
+}
+
+#myLittleCarousel{
+    /*transform: rotate(180deg) scale(0.6);*/
+    transform: scale(0.6);
+    /*margin-bottom: 5%;*/
+    
+}
+
+#myBigCarousel{
+    transform: rotate(180deg);
+    /*margin-bottom: 5%;*/
+    
+}
+
+.little{
+    /*transform: rotate(180deg);*/ 
+}
+
+.littleBig{
+    transform: rotate(180deg);
 }
 
 .rouge{
@@ -15,16 +36,40 @@
     overflow: hidden;
 }
 
+.buttons{
+    position: absolute;
+    z-index: 2;
+}
+
+#left{
+    margin-top: -10%;
+    margin-left: 20%;
+}
+
+#right{
+    margin-top: -10%;
+    margin-left: 75%;
+}
+
 /*.owl-item{
     width : 20%;
 }*/
 
+#definition{
+    display: none;
+}
+
+#description-box{
+    margin-left: 36.5%;
+}
+
 .owl-stage-outer{
-    width: 50%;
+   width: 50%;
     margin-left: 25%;
 }
 
 .owl-stage{
+    width:50%;
     /*width: 3400px !important;*/
 }
 

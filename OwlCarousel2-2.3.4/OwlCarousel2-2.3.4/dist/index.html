@@ -16,45 +16,169 @@
 </head>
 <body>
 
-<div class="container mt-6">
-    <div class="row">
-            <div class="owl-carousel owl-theme">
-                <div id="takoyaki" class="popup">
-                    img Takoyaki 
-                    <span class="popuptext">
-                        <h3>Takoyaki</h3>
-                        <h4>"Poulpe Grillé"</h4>
-                        <p>Boulettes de pâtes fourré aux morceaux de poulpes. Spécialité de la ville d’Osaka, communément vendu directement dans la rue dans de petites échoppes ambulantes (« yatai »). A consommer bouillant, à peine sorti de la plaque !</p>
-                    </span>
-                </div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem bleu"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem rouge"></div>
-                <div class="carre elem bleu"></div>
+
+<script >
+    /*<div class="carre elem rouge" data-index="11"></div>
+<div class="carre elem bleu" data-index="10"></div>
+<div class="carre elem rouge" data-index="9"></div>
+<div id="ramen" data-index="8">
+    <img src='images/ramen.svg'>
+</div>
+<div class="carre elem bleu" data-index="7"></div>
+<div class="carre elem rouge" data-index="6"></div>
+<div class="carre elem rouge" data-index="5"></div>
+<div class="carre elem rouge" data-index="4"></div>
+<div class="carre elem rouge" data-index="3"></div>
+<div class="carre elem rouge" data-index="2"></div>
+<div id="takoyaki" data-index="1">
+    Takoyaki
+</div>*/
+</script>
+
+
+
+            
+            <div id="myLittleCarousel" class="owl-carousel owl-theme">
+                
+                <div id="takoyaki" data-index="1" class="little">
+                        Takoyaki
+                    </div>
+                    <div class="carre elem rouge little" data-index="2"></div>
+                    <div class="carre elem rouge little" data-index="3"></div>
+                    <div class="carre elem rouge little" data-index="4"></div>
+                    <div class="carre elem rouge little" data-index="5"></div>
+                    <div class="carre elem rouge little" data-index="6"></div>
+                    <div class="carre elem bleu little" data-index="7"></div>
+                    <div id="ramen" class="little" data-index="8">
+                        <img src='images/ramen.svg'>
+                    </div>
+                    <div class="carre elem rouge little" data-index="9"></div>
+                    <div class="carre elem bleu little" data-index="10"></div>
+                    <div class="carre elem rouge little" data-index="11"></div>         
             </div>
-    </div>
+
+            
+
+
+            <div id="myBigCarousel" class="owl-carousel owl-theme">
+                <div id="takoyaki" data-index="1" class="popup littleBig">
+                    Takoyaki
+                </div>
+                <div class="carre elem rouge littleBig" data-index="2"></div>
+                <div class="carre elem rouge littleBig" data-index="3"></div>
+                <div class="carre elem rouge littleBig" data-index="4"></div>
+                <div class="carre elem rouge littleBig" data-index="5"></div>
+                <div class="carre elem rouge littleBig" data-index="6"></div>
+                <div class="carre elem bleu littleBig" data-index="7"></div>
+                <div id="ramen" class="popup littleBig" data-index="8">
+                    <img src='images/ramen.svg'>
+                </div>
+                <div class="carre elem rouge littleBig" data-index="9"></div>
+                <div class="carre elem bleu littleBig" data-index="10"></div>
+                <div class="carre elem rouge littleBig" data-index="11"></div>
+            </div>
+
+            <input type="button" class="buttons" id="left" value="Left"/>
+            <input type="button" class="buttons" id="right" value="Right"/>
+            <input type="button" class="buttons" id="stop" value="Stop"/>
+
+            
+
+
+<script>
+        let compt=0;
+        var front;
+
+        $(document).ready(function(){
+
+             back = $("#myLittleCarousel").owlCarousel(
+                {
+                    //rtl:true,
+                    loop : true,
+                    dots : false,
+                    nav:false,
+                    touchDrag  : false,
+                    mouseDrag  : false,
+                    items : 9,
+                    center : true,
+                    startPosition : 6,
+                    
+                    autoplay:true,
+                    autoplayTimeout:1000,
+                }
+            );
+
+            front = $("#myBigCarousel").owlCarousel(
+                {
+                    
+                    loop : true,
+                    dots : false,
+                    nav:false,
+                    touchDrag  : false,
+                    mouseDrag  : false,
+                    items : 9,
+                    center : true,
+                    autoplay:true,
+                    autoplayTimeout:1000,
+                }
+            );
+        });
+
+
+
+$('#right').click(function() {
+    $('#description-box').empty();
+    $("#myBigCarousel").trigger('next.owl.carousel');
+    $("#myLittleCarousel").trigger('next.owl.carousel');
+    $('#myBigCarousel').trigger('stop.owl.autoplay');
+    $('#myLittleCarousel').trigger('stop.owl.autoplay');
+    $('#stop').val("Relancer le plateau");
+                
+})
+// Go to the previous item
+$('#left').click(function() {
+    $('#description-box').empty();
+    $("#myBigCarousel").trigger('prev.owl.carousel');
+    $("#myLittleCarousel").trigger('prev.owl.carousel');
+    $('#myBigCarousel').trigger('stop.owl.autoplay');
+    $('#myLittleCarousel').trigger('stop.owl.autoplay');
+    $('#stop').val("Relancer le plateau");
+    
+
+})
+
+$('#stop').click(function() {
+    $('#description-box').empty();
+    compt=1-compt;
+    
+    if(compt==1){
+        $('#stop').val("Relancer le plateau");
+        $('#myBigCarousel').trigger('stop.owl.autoplay');
+        $('#myLittleCarousel').trigger('stop.owl.autoplay');
+    }
+    else{
+        $('#stop').val("Stopper le plateau");
+        $('#myBigCarousel').trigger('play.owl.autoplay');
+        $('#myLittleCarousel').trigger('play.owl.autoplay');
+    }
+})
+    </script>
+
+<div id="description-box"></div>
+<div id="definition">
+    <span class="popuptext" data-popup="takoyaki" data-place="2">
+        <h3>Takoyaki</h3>
+        <h4>"Poulpe Grillé"</h4>
+        <p>Boulettes de pâtes fourré aux morceaux de poulpes. Spécialité de la ville d’Osaka, communément vendu directement dans la rue dans de petites échoppes ambulantes (« yatai »). A consommer bouillant, à peine sorti de la plaque !</p>
+    </span>
+
+    <span class="popuptext" data-popup="ramen" data-place="9">
+        <h3>Ramen</h3>
+        <h4>"Le classique"</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic voluptatum neque recusandae, doloremque odit consequatur ipsa nemo delectus rem, blanditiis deleniti assumenda. Similique accusantium eum commodi ab optio dolor?</p>
+    </span>
 </div>
 
-
-
-        <script>
-            var front;
-
-            $(document).ready(function(){
-                front = $(".owl-carousel").owlCarousel(
-                    {
-                        loop : true,
-                        items : 9,
-                        center : true,
-                    }
-                );
-            });
-        </script>
     
 </body>
 <footer>
