@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="WowJs/WowJs/css/libs/animate.css">
+    <link rel="stylesheet" href="WowJs/WowJs/css/site.css">
+    <link rel="stylesheet" href="css/contemporary.css">
+
 </head>
+
 <body>
 
     <h1>Je fais un Test</h1>
 
     <section id="contemporary">
-        <div class="w3-container" id="text1">
-            <img src="" alt="">
-            <p class="w3-center w3-animate-bottom">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum fugit nesciunt ab dicta?</p>
+        <div class="container" id="text1">
+            <div class="imgs">
+                <img id="img1" class="wow slideInRight" src="Img/ville1.jpg" alt="">
+            </div>
+            <div class="texts wow fadeInUp">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?</p>
+            </div>
         </div>
-        <div id="text2">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum fugit nesciunt ab dicta?</p>
+        <div class="container" id="text2">
+            <div class="imgs">
+                <img id="img1" class="wow slideInLeft" src="Img/ville1.jpg" alt="">
+            </div>
+            <div class="texts wow fadeInUp">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                fugit nesciunt ab dicta?</p>
+            </div>
         </div>
-        <div id="text3">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum fugit nesciunt ab dicta?</p>
-        </div>
-        <div id="text4">
-                <img src="" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum fugit nesciunt ab dicta?</p>
+        <div class="container" id="text3">
+            <div class="imgs">
+                <img id="img1" class="wow slideInRight" src="Img/ville1.jpg" alt="">
+            </div>
+            <div class="texts wow fadeInUp">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cumque numquam aut
+                        tempora repellendus quis, fugiat quas est odio exercitationem qui deleniti, et dolorum voluptatem illum
+                        fugit nesciunt ab dicta?</p>
+            </div>
         </div>
     </section>
-    
+
+    <script src="WowJs/WowJs/dist/wow.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 100,
+                callback: function (box) {
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                }
+            }
+        );
+        wow.init();
+    </script>
+
 </body>
+
 </html>

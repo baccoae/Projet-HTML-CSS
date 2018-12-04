@@ -1,0 +1,30 @@
+.wow:first-child {
+    visibility: hidden;
+  }
+
+#contemporary{
+    
+}
+
+.container{
+    position: relative;
+}
+
+.texts{
+    position: relative;
+    width:40%;
+    margin: auto;
+    bottom: 100px;
+    color: white;
+    font-size: 100%;
+    background: rgb(26, 23, 23,0.7);
+}
+
+.imgs{
+    width:70%;
+    margin: auto;
+}
+
+.imgs img{
+    width:100%;
+}
