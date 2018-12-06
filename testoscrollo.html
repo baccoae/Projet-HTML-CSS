@@ -1,0 +1,105 @@
+!
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 1500px;
+        }
+
+        html { overflow-y: hidden; } 
+
+
+        #myDiv {
+            /*position:absolute;*/
+            overflow: hidden;
+            left: 0;
+            /* top:500px;
+            height:0px;*/
+            background-color: #458963;
+            color: #00f;
+            /*width: 20%;
+            margin-left: 600px;*/
+           /* width:300px;
+            height:300px;*/
+            transform: scale(1);
+        }
+
+        #box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40vw;
+            margin: auto;
+            margin-top: 500px;
+        }
+    </style>
+    <div id="box">
+        <img id="myDiv" src="http://www.cadeau-maestro.com/1847-7362-thickbox_default/recharge-plante-click-and-grow-.jpg"
+            width="300" />
+    </div>
+
+    <script>
+
+        window.addEventListener("wheel", wheelScript);
+
+
+function wheelScript(e){
+    let valueDelta = 0;
+
+    if (e.deltaY < 0) {
+        valueDelta = valueDelta + e.deltaY;
+        console.log(e.deltaY);
+        calcul = valueDelta/100;
+        console.log(calcul);
+        $('#myDiv').style.transform = "scale("+1+calcul+")";
+    }
+    if (e.deltaY > 0) {
+        valueDelta = valueDelta + e.deltaY;
+        console.log(e.deltaY);
+        calcul = valueDelta/100;
+        console.log(calcul);
+        $('#myDiv').style.transform = "scale("+1+calcul+")";
+    }
+}
+
+
+        /*$(function () {
+            $(window).on('scroll', function () {
+                var $myDiv = $('#myDiv');
+                var st = window.scrollY;
+                var $myDivTop = ($myDiv.position().top) - 300;
+                if (st >= $myDivTop && st <= ($myDivTop + 1000)) {
+                    $myDiv.css('transform','scale('+(st - $myDivTop)/300+')');
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': +(st - $myDivTop) + 'px', 'height': +(st - $myDivTop) + 'px', 'margin-top': -100 +(st - $myDivTop) + 'px' }, 10)*/;
+                /*}
+
+                else if (st <= $myDivTop) {
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': '0px', 'height': '0px', 'margin-top': +(st - $myDivTop) + 'px' },10);*/
+                /*}
+
+                else if (st >= ($myDivTop + 1000)) {
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': '1000px', 'height': '1000px', 'margin-top': +(st - $myDivTop) + 'px' }, 10);*/
+                /*}
+            })
+                .scroll();
+        })*/
+    </script>
+</body>
+
+</html>
