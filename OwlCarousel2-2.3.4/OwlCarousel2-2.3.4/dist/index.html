@@ -58,7 +58,7 @@
             </div>
 
             
-
+            <input type="button" class="buttons" id="stop" value="Stop"/>
 
             <div id="myBigCarousel" class="owl-carousel owl-theme">
                 <div id="takoyaki" data-index="1" class="popup littleBig">
@@ -80,7 +80,7 @@
 
             <input type="button" class="buttons" id="left" value="Left"/>
             <input type="button" class="buttons" id="right" value="Right"/>
-            <input type="button" class="buttons" id="stop" value="Stop"/>
+            
 
             
 
@@ -97,16 +97,34 @@
                     loop : true,
                     dots : false,
                     nav:false,
-                    touchDrag  : false,
-                    mouseDrag  : false,
-                    items : 9,
                     center : true,
-                    startPosition : 6,
-                    
-                    autoplay:true,
-                    autoplayTimeout:1000,
+                    startPosition : 6,        
+                    responsiveClass:true,
+                        responsive:{
+                            0:{
+                                autoplay:false,
+                                items:1,
+                                center : true,
+                                touchDrag  : true,
+                                mouseDrag  : false,
+                                
+                            },
+                            600:{
+                                items:5,
+                                autoplay:true,
+                                autoplayTimeout:1000,
+                                touchDrag  : false,
+                                mouseDrag  : false,
+                            },
+                            1000:{
+                                items:9,
+                                autoplay:true,
+                                autoplayTimeout:1000,
+                                touchDrag  : false,
+                                mouseDrag  : false,
+                            }
                 }
-            );
+            });
 
             front = $("#myBigCarousel").owlCarousel(
                 {
@@ -114,12 +132,36 @@
                     loop : true,
                     dots : false,
                     nav:false,
-                    touchDrag  : false,
-                    mouseDrag  : false,
-                    items : 9,
                     center : true,
                     autoplay:true,
                     autoplayTimeout:1000,
+
+                    responsiveClass:true,
+                        responsive:{
+                            0:{
+                                autoplay:false,
+                                items:2,
+                                center : true,
+                                touchDrag  : true,
+                                mouseDrag  : true,
+                                
+                            },
+                            600:{
+                                items:5,
+                                autoplay:true,
+                                autoplayTimeout:1000,
+                                touchDrag  : false,
+                                mouseDrag  : false,
+                            },
+                            1000:{
+                                items:9,
+                                autoplay:true,
+                                autoplayTimeout:1000,
+                                touchDrag  : false,
+                                mouseDrag  : false,
+                            }
+                }
+
                 }
             );
         });

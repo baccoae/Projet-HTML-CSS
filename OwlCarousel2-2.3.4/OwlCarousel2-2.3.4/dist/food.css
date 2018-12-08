@@ -18,6 +18,13 @@
     z-index: 1;
 }
 
+@media (max-width: 600px) {
+    #description-box .popuptext {
+        margin-left:25%;
+        width: 50%;
+    }
+}
+
 /* Popup arrow */
 #description-box .popuptext::after {
     content: "";

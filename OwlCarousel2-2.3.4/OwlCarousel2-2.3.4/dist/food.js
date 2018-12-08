@@ -5,6 +5,20 @@ console.log('food.js included')
 $().ready(function(){
 
     var popup;
+    var x;
+
+    if (window.innerWidth<600){
+        x=2;
+        console.log("width < 600");
+    }
+    else if(window.innerWidth<1000){
+        console.log("width<1000");
+        x=1;
+    }
+    else{
+        x=0;
+        console.log("width>1000");
+    }
 
     /*$(document).click(function(){
         popup.classList.toggle("show");
@@ -21,7 +35,7 @@ $(".popup").click(function(){
     var findIt = $('#definition').find('[data-popup=' + data + ']');
     var position = $('#definition').find('[data-popup=' + data + ']').attr('data-place');
     console.log(position);
-    $('#myBigCarousel').trigger('to.owl.carousel', position);
+    $('#myBigCarousel').trigger('to.owl.carousel', position-x);
     $('#myLittleCarousel').trigger('to.owl.carousel', position-5);
     var copie = findIt.clone();
     $('#description-box').append(copie);
