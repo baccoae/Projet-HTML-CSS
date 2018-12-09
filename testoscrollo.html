@@ -33,7 +33,8 @@
             margin-left: 600px;*/
            /* width:300px;
             height:300px;*/
-            transform: scale(1);
+            transform: scale(0.11);
+            opacity: 1;
         }
 
         #box {
@@ -43,7 +44,7 @@
             justify-content: center;
             width: 40vw;
             margin: auto;
-            margin-top: 500px;
+            margin-top: 20%;
         }
     </style>
     <div id="box">
@@ -52,26 +53,64 @@
     </div>
 
     <script>
+        let calculScale = 0.11;
+        let calculOpacity = 1;
 
         window.addEventListener("wheel", wheelScript);
 
 
 function wheelScript(e){
+    
     let valueDelta = 0;
 
     if (e.deltaY < 0) {
-        valueDelta = valueDelta + e.deltaY;
-        console.log(e.deltaY);
-        calcul = valueDelta/100;
-        console.log(calcul);
-        $('#myDiv').style.transform = "scale("+1+calcul+")";
+        valueDelta = valueDelta - e.deltaY;
+
+        if(calculScale>=0.1 && calculScale<=1.5){
+            calculScale += valueDelta/300;
+        }
+
+        else{
+            calculScale += valueDelta/150;
+            calculOpacity -= valueDelta/1500;
+
+            if(calculOpacity<0){
+                calculOpacity=0;
+                $('#myDiv').remove();
+            }
+
+            console.log(calculOpacity);
+        }
+
+        //$('#myDiv').style.transform = "scale("+1+calculScale+")";
+        //$('#myDiv').css('width',calculScale);
+
     }
+    
     if (e.deltaY > 0) {
-        valueDelta = valueDelta + e.deltaY;
-        console.log(e.deltaY);
-        calcul = valueDelta/100;
-        console.log(calcul);
-        $('#myDiv').style.transform = "scale("+1+calcul+")";
+        valueDelta = valueDelta - e.deltaY;
+
+        if(calculScale>=0.1 && calculScale<=1){
+            calculScale += valueDelta/300;
+            //calculOpacity -= valueDelta/1500;
+        }
+
+        else{
+            calculScale += valueDelta/150;
+        }
+
+        if(calculScale <= 0.1){
+            calculScale=0.1;
+        }
+
+        console.log(calculScale);
+        //$('#myDiv').style.transform = "scale("+1+calculScale+")";
+        //$('#myDiv').css('width',calculScale);
+    }
+
+    if($('#myDiv')){
+        $('#myDiv').css('transform','scale('+calculScale+')');
+        $('#myDiv').css('opacity',calculOpacity);
     }
 }
 
