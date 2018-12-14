@@ -26,6 +26,8 @@ $().ready(function(){
 
 $(".popup").click(function(){
     
+    console.log($(this));
+    console.log($(this).attr('id'));
     console.log($("#myBigCarousel").owlCarousel);
     $('#myBigCarousel').trigger('stop.owl.autoplay');
     $('#myLittleCarousel').trigger('stop.owl.autoplay');
@@ -38,6 +40,7 @@ $(".popup").click(function(){
     $('#myBigCarousel').trigger('to.owl.carousel', position-x);
     $('#myLittleCarousel').trigger('to.owl.carousel', position-5);
     var copie = findIt.clone();
+    console.log(copie);
     $('#description-box').append(copie);
     console.log($('#description-box').find('[data-popup=' + data + ']').toggleClass("show"));
 
