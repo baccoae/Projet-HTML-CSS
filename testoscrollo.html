@@ -77,6 +77,8 @@ function wheelScript(e){
             if(calculOpacity<0){
                 calculOpacity=0;
                 $('#myDiv').remove();
+                $('#contemporary').removeProp("display");
+                $('html').removeProp("overflow-y");
             }
 
             console.log(calculOpacity);
@@ -88,24 +90,33 @@ function wheelScript(e){
     }
     
     if (e.deltaY > 0) {
+
         valueDelta = valueDelta - e.deltaY;
 
         if(calculScale>=0.1 && calculScale<=1){
             calculScale += valueDelta/300;
-            //calculOpacity -= valueDelta/1500;
+            calculOpacity -= valueDelta/1500;
         }
 
         else{
             calculScale += valueDelta/150;
+            calculOpacity -= valueDelta/1500;
         }
 
         if(calculScale <= 0.1){
             calculScale=0.1;
         }
 
+
         console.log(calculScale);
         //$('#myDiv').style.transform = "scale("+1+calculScale+")";
         //$('#myDiv').css('width',calculScale);
+
+        if(calculOpacity>1){
+                calculOpacity=1;
+            }
+
+        console.log(calculOpacity);
     }
 
     if($('#myDiv')){

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="WowJs/WowJs/css/libs/animate.css">
     <link rel="stylesheet" href="WowJs/WowJs/css/site.css">
@@ -15,7 +16,10 @@
 
 <body>
 
-    <h1>Je fais un Test</h1>
+        <div id="box">
+                <img id="myDiv" src="http://www.cadeau-maestro.com/1847-7362-thickbox_default/recharge-plante-click-and-grow-.jpg"
+                    width="300" />
+            </div>
 
     <section id="contemporary">
         <div class="container" id="text1">
@@ -76,7 +80,109 @@
         wow.init();
         /*'top':+(st-$myDivTop)+'px' */
 
+        
+
     
+    </script>
+
+<script>
+        let calculScale = 0.11;
+        let calculOpacity = 1;
+
+        window.addEventListener("wheel", wheelScript);
+
+
+function wheelScript(e){
+    
+    let valueDelta = 0;
+
+    if (e.deltaY < 0) {
+        valueDelta = valueDelta - e.deltaY;
+
+        if(calculScale>=0.1 && calculScale<=1.5){
+            calculScale += valueDelta/300;
+        }
+
+        else{
+            calculScale += valueDelta/150;
+            calculOpacity -= valueDelta/1500;
+
+            if(calculOpacity<0){
+                calculOpacity=0;
+                $('#myDiv').remove();
+                $('#box').remove();
+                $('#contemporary').css('display',"inline");
+                $('html').css('overflow-y',"scroll");
+            }
+
+            console.log(calculOpacity);
+        }
+
+        //$('#myDiv').style.transform = "scale("+1+calculScale+")";
+        //$('#myDiv').css('width',calculScale);
+
+    }
+    
+    if (e.deltaY > 0) {
+
+        valueDelta = valueDelta - e.deltaY;
+
+        if(calculScale>=0.1 && calculScale<=1){
+            calculScale += valueDelta/300;
+            calculOpacity -= valueDelta/1500;
+        }
+
+        else{
+            calculScale += valueDelta/150;
+            calculOpacity -= valueDelta/1500;
+        }
+
+        if(calculScale <= 0.1){
+            calculScale=0.1;
+        }
+
+
+        console.log(calculScale);
+        //$('#myDiv').style.transform = "scale("+1+calculScale+")";
+        //$('#myDiv').css('width',calculScale);
+
+        if(calculOpacity>1){
+                calculOpacity=1;
+            }
+
+        console.log(calculOpacity);
+    }
+
+    if($('#myDiv')){
+        $('#myDiv').css('transform','scale('+calculScale+')');
+        $('#myDiv').css('opacity',calculOpacity);
+    }
+}
+
+
+        /*$(function () {
+            $(window).on('scroll', function () {
+                var $myDiv = $('#myDiv');
+                var st = window.scrollY;
+                var $myDivTop = ($myDiv.position().top) - 300;
+                if (st >= $myDivTop && st <= ($myDivTop + 1000)) {
+                    $myDiv.css('transform','scale('+(st - $myDivTop)/300+')');
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': +(st - $myDivTop) + 'px', 'height': +(st - $myDivTop) + 'px', 'margin-top': -100 +(st - $myDivTop) + 'px' }, 10)*/;
+                /*}
+
+                else if (st <= $myDivTop) {
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': '0px', 'height': '0px', 'margin-top': +(st - $myDivTop) + 'px' },10);*/
+                /*}
+
+                else if (st >= ($myDivTop + 1000)) {
+                    $myDiv.animate({'margin-top': -100 +(st - $myDivTop) + 'px' }, 10);
+                    /*$myDiv.animate({ 'width': '1000px', 'height': '1000px', 'margin-top': +(st - $myDivTop) + 'px' }, 10);*/
+                /*}
+            })
+                .scroll();
+        })*/
     </script>
 
 </body>
