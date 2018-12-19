@@ -1,0 +1,97 @@
+/*html { overflow-y: hidden; } */
+
+.wow:first-child {
+    visibility: hidden;
+  }
+
+#contemporary{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    #contemporary{
+        display: inline;
+    }
+}
+
+.container{
+    position: relative;
+}
+
+.texts{
+    position: relative;
+    width:40%;
+    margin: auto;
+    bottom: 8vw;
+    color: white;
+    font-size: 1vw;
+    background: rgb(26, 23, 23,0.7);
+}
+
+@media screen and (max-width: 1200px){
+    .texts{
+        width:60%;
+        font-size: 2vw;
+        bottom: 0vw;
+    }
+}
+
+.imgs{
+    width:70%;
+    margin: auto;
+}
+
+.imgs img{
+    width:100%;
+}
+
+body {
+    height: 1500px;
+}
+
+html { overflow-y: hidden; } 
+
+@media screen and (max-width: 1200px){
+    html { 
+        overflow-y: scroll; 
+    }
+}
+
+
+#myDiv {
+    /*position:absolute;*/
+    overflow: hidden;
+    left: 0;
+    /* top:500px;
+    height:0px;*/
+    background-color: #458963;
+    color: #00f;
+    /*width: 20%;
+    margin-left: 600px;*/
+   /* width:300px;
+    height:300px;*/
+    transform: scale(0.11);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1200px){
+    #myDiv{
+        display: none;
+    }
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    margin: auto;
+    margin-top: 20%;
+}
+
+@media screen and (max-width: 1200px){
+    #box{
+        display: none;
+    }
+}
