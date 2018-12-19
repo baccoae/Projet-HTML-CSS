@@ -1,0 +1,86 @@
+body {
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#dust {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 36%;
+  z-index: 2;
+}
+
+#element1 {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trait {
+  width: 40px;
+  height: 1px;
+  margin: 0 15px 0 15px;
+  background-color: white;
+  
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  visibility: none;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: white;
+  z-index: 3;
+  position: absolute;
+}
+
+.titre1 {
+  margin: 0 0 60vh 0;
+}
+
+.test {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  z-index: 1;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+}
+
+[data-backg="test1"], [data-backg="test2"] , [data-backg="test3"] , [data-backg="test4"] , [data-backg="test5"] {
+  background-color: rgb(25, 25, 25);
+}
