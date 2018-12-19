@@ -7,10 +7,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylemap.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="Text/Javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!--owl-->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <!--map-->
+    <script src="js/jquery.rwdImageMaps.min.js"></script>
 </head>
 <body>
 
     <h1>Je fais un Test</h1>
+
+<section id="carte">       
+    <div class="map">
+           <img id="japoncarte" src="img/japan_map.svg" usemap="#lesvilles"/>
+           <map name="lesvilles">
+               <area name="Tokyo" shape="circle" coords="120,93,6" href="#popup1" alt="Tokyo logo">
+               <area name="Kyoto" shape="circle" coords="84,95,6" href="#popup2" alt="Kyoto logo">
+               <area name="Osaka" shape="circle" coords="78,105,6" href="#popup3" alt="Osaka logo">
+               <area name="Hiroshima" shape="circle" coords="51,100,6" href="#popup4" alt="Hiroshima logo">
+               <area name="Okinawa" shape="circle" coords="5,145,6" href="#popup5" alt="Okinawa logo">
+               <area name="Sapporo" shape="circle" coords="136,20,6" href="#popup6" alt="Sapporo logo">
+               <!-- <area name="Hiraizumi" shape="circle" coords="" href="#popup7" alt="Hiraizumi logo">-->
+               <area name="Shirakami-sanchi" shape="circle" coords="126,51,6" href="#popup8" alt="Shirakami logo">
+               <area name="Mont-Fuji" shape="circle" coords="104,94,6" href="#popup9" alt="Mont-Fuji logo">
+               <area name="Chateau-himeji" shape="circle" coords="69,96,6" href="#popup10" alt="Chateau-himeji logo">
+               
+           </map>
+       </div>
+           
+       <!--Contenu des Pop-up-->
+       <div class="villes">
+           <div class=Tokyo>
+                   <div id="popup1" class="overlay">
+                           <div class="popup">
+                                   <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                   <div class="content">
+                                       <div id="owl-demo" class="owl-demo owl-carousel owl-theme"> <!--flexbox sur lui-->
+                                           <div class="item"><img src="img/thomas-ribaud-665075-unsplash.jpg"/></div>
+                                           <div class="item"><img src="img/andre-benz-256762-unsplash.jpg"/></div>
+                                       </div>
+                                       <div class="text">
+                                           <h2>Tokyo</h2>
+                                           <p>Tokyo est la capitale du Japon et est aussi l’une des villes les plus peuplées avec 13 millions d’habitants. La capitale est composée de 23 arrondissements spéciaux en son centre, possédant tous, une ambiance bien spécifique. Par exemple, l’arrondissement de Shibuya est connu notamment pour le Shibuya Crossing Road, mais aussi pour être un symbole de la mode. Shinjuku tant qu’a lui, est connu pour être l’arrondissement comportant le plus d’étrangers et étant l’un des quartiers les plus animés de Tokyo.</p>
+                                       </div>
+                                   </div>
+                           </div>
+                   </div>
+           </div>
+       
+           <div class=Kyoto>
+                   <div id="popup2" class="overlay">
+                           <div class="popup">
+                                   <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                   <div class="content">
+                                       <div id="owl-demo2" class="owl-demo owl-carousel owl-theme">
+                                           <div class="item"><img  src="img/sorasak-252182-unsplash.jpg"/></div>
+                                           <div class="item"><img src="img/tom-chen-675194-unsplash.jpg"/></div>
+                                       </div>
+                                       <div class="text">
+                                           <h2>Kyoto</h2>
+                                           <p>Kyoto est l’ancienne capitale du Japon. Cette ville regorge de sanctuaires, de monuments classés au patrimoine mondial de l’UNESCO et de monuments historiques. Elle est souvent considérée comme le parfait exemple d’une cité traditionnelle japonaise. L’un des temples les plus célèbres est le Fushimi Inari-taisha, sanctuaire principal de la déesse du riz Inari. Ce sanctuaire compte 10 000 torii.</p>
+                                       </div>
+                                   </div>
+                           </div>
+                   </div>
+           </div>
+       
+           <div class=Osaka>
+               <div id="popup3" class="overlay">
+                       <div class="popup">
+                               <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                               <div class="content">
+                                   <div id="owl-demo3" class="owl-demo owl-carousel owl-theme">
+                                       <div class="item"><img src="img/alexander-smagin-609589-unsplash.jpg"/></div>
+                                       <div class="item"><img src="img/osaka-port-2281899_1920.jpg"/></div>
+                                   </div>
+                                   <div class="text">
+                                       <h2>Osaka</h2>
+                                       <p>Osaka est la 3ème plus grande ville du Japon. Osaka est réputée pour sa gastronomie et son dialecte spécifique à la région du Kansai. Son célèbre château Ōsaka-jō, construit en 1583, à joué un rôle majeur pour la réunification du Japon lors de sa construction.Dans cette ville, on peut également trouver l’un des parcs Universal Studio, mais aussi, le premier temple bouddhiste construit au Japon sur ordre de l’empereur Tenji.
+                                       </p>
+                                   </div>
+                               </div>
+                       </div>
+               </div>
+       
+               <div class=Hiroshima>
+                   <div id="popup4" class="overlay">
+                           <div class="popup">
+                                   <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                   <div class="content">
+                                       <div id="owl-demo4" class="owl-demo owl-carousel owl-theme">
+                                           <div class="item"><img src="img/tianshu-liu-242331-unsplash.jpg"/></div>
+                                           <div class="item"><img src="img/kelly-russo-1161997-unsplash.jpg"/></div>
+                                       </div>
+                                       <div class="text">
+                                           <h2>Hiroshima</h2>
+                                           <p>Hiroshima est mondialement connue pour avoir été la première cible des bombardements atomiques des Etats-Unis le 6 août 1945. Après la guerre, la ville fut entièrement reconstruite. En son coeur se trouve le parc de la paix, qui regroupe notamment le mémorial de la paix d’Hiroshima, autrement appelé le dôme de la bombe. C’est aujourd’hui l’un des principaux centres industriels et portuaires de l’ouest du Japon.
+                                           </p>
+                                       </div>
+                                   </div>
+                           </div>
+                   </div>
+       
+                   <div class=Okinawa>
+                       <div id="popup5" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo5" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/hayato-shin-728689-unsplash.jpg"/></div>
+                                               <div class="item"><img src="img/shisa.jpg!d"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Okinawa</h2>
+                                               <p>L’Archipel d’Okinawa est souvent surnommée le “Hawaii japonais”. De nombreux touristes, surtout japonais, viennent profiter de ses plages magnifiques et de son eau turquoise. Le symbole de l’Archipel, le Shisa, est un animal mythique, représente la protection. Les Shisa sont souvent par paires, la femelle à la gueule fermée et retient les bons esprits, tandis que le mâle à la gueule ouverte et effraie les mauvais esprits.
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       
+                   <div class=Sapporo>
+                       <div id="popup6" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo6" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/jj-ying-215316-unsplash.jpg"/></div>
+                                               <div class="item"><img src="img/sapporo.jpg!d"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Sapporo</h2>
+                                               <p>Sapporo est la capitale de l’île d’Hokkaido. Cette ville a été rendue célèbre grâce aux Jeux Olympiques d’Hiver de 1972. Aujourd’hui, l'événement le plus apprécié dans cette ville, est son fameux festival de la neige. Chaques années, au mois de février, de superbes sculptures de glaces sont présentées dans le centre de la ville, au parc Odori.
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       
+                   <div class=Hiraizumi>
+                       <div id="popup7" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo7" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/hiraizumi1.jpg"/></div>
+                                               <div class="item"><img src="img/hiraizumi2.jpg"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Hiraizumi</h2>
+                                               <p>La ville de Hiraizumi, avec ses 5 sites qui l’entourent, a été enregistrée en juin 2011 au patrimoine mondial de l’UNESCO. Au sein de Hiraizumi se trouve un groupe de plusieurs temples et jardins qui furent créés sur la base du bouddhisme, et plus précisément, sur l’idéologie du Bouddhisme de la Terre Pure. 
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       
+                   <div class=Shirakami-sanchi>
+                       <div id="popup8" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo8" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/shirakami.jpg!d"/></div>
+                                               <div class="item"><img src="img/shirkami2.jpg!d"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Shirakami-Sanchi</h2>
+                                               <p>Shirakami-Sanchi est un site inscrit au patrimoine mondial de l’UNESCO depuis 1993. Le site est dépourvu de routes et de sentiers et cette étendue sauvage couvre un tiers de la chaîne de montagnes de Shirakami. C’est le vestige de forêts tempérées froides de hêtres qui couvraient les collines et les pentes des montagnes du Nord du Japon depuis huit à douze mille ans.
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       
+                   <div class=Mont-Fuji>
+                       <div id="popup9" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo9" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/jj-ying-230105-unsplash.jpg"/></div>
+                                               <div class="item"><img src="img/mt-fuji-477832_1920.jpg"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Mont Fuji</h2>
+                                               <p>Le Mont Fuji, symbole majeur de l’archipelle japonaise, est une montagne japonaise mesurant 3776 mètres d’altitudes. Cette montagne est en réalité un volcan qui est considéré comme toujours actif, bien que le risque qu’il y ait une éruption soit faible. Il a été inscrit au patrimoine mondial de l’UNESCO en 2013, sous le titre de “Fujisan, lieu sacré et source d’inspiration artistique".
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       
+                   <div class=Chateau-himeji>
+                       <div id="popup10" class="overlay">
+                               <div class="popup">
+                                       <a class="close" href="#" style="color:red; z-index:5">&times;</a>
+                                       <div class="content">
+                                           <div id="owl-demo10" class="owl-demo owl-carousel owl-theme">
+                                               <div class="item"><img src="img/himeji-3424658_1920.jpg"/></div>
+                                               <div class="item"><img src="img/japan-2253410_1920.jpg"/></div>
+                                           </div>
+                                           <div class="text">
+                                               <h2>Château Himeji</h2>
+                                               <p>Le château Himeji, situé dans la ville au nom éponyme, est réputé pour être l’un des douze derniers châteaux en bois du Japon. Il a été construit en 1609 et est surnommé le château du Héron Blanc, à cause de sa peinture blanche immaculée. Ce château a été inscrit au patrimoine mondial de l’UNESCO en 1993. Il est possible de visiter ses 6 étages.
+                                               </p>
+                                           </div>
+                                       </div>
+                               </div>
+                       </div>
+                   </div>
+       </div>
+       
+       </div>
+           
+       
+       </section>
+       
+       
+       <section class="ancestrale">
+       
+       <div class="partie">
+               <div class="over">
+                   <p>Le théâtre</p>
+                   <img class='haut' id="theatre" src="img/japan-1416901_1920.jpg"/>
+               </div>
+               <div class="vide"></div>
+               <div class="premier">
+               </div>
+               <div class="vide"></div>
+               <div class="over">
+                   <p>La religion</p>
+                   <img class="haut" id="religion" src="img/japan-2793015_1920.jpg"/>
+               </div>
+       </div>
+       
+       
+       <h2>Culture ancestrale</h2>
+       
+       <div class="partie">
+               <div class="over">
+                   <p>La calligraphie</p>
+                   <img class="bas" id="calligraphie"src="img/calligraphy-1176333_1280.jpg"/>
+               </div>
+               <div class="vide"></div>
+               <div class="deuxieme">
+               </div>
+               <div class="vide"></div>
+              <div class="over">
+                   <p>Les vêtements</p>
+                   <img class="bas" id="vetements" src="img/beauty-1822467_1920.jpg"/>
+               </div>
+       </div>
+       
+       </section>       <script>
+           $().ready(function() {
+       
+               /**Tous les caroussels**/
+       
+                   $('.owl-demo').owlCarousel({
+                   navigation:true,
+                   items:1,
+                   singleItem:true,
+                   animateIn: 'fadeIn', // add this
+                   animateOut: 'fadeOut' // and this
+                   });
+       
+           });
+       
+           /**La section ancestrale**/
+       
+           $(".haut").on("mouseenter",function(){
+               let data = $(this).attr('id');
+               let trouver = $("#quatre").find("[data-culture="+ data + "]");
+               let copie = trouver.clone();
+               $(".premier").append(copie);
+           });
+       
+           $(".haut").on("mouseleave",function(){
+               $(".premier").empty();
+           });
+       
+           $(".bas").on("mouseenter",function(){
+               let data = $(this).attr('id');
+               let trouver = $("#quatre").find("[data-culture="+ data + "]");
+               let copie = trouver.clone();
+               $(".deuxieme").append(copie);
+           });
+       
+           $(".bas").on("mouseleave",function(){
+               $(".deuxieme").empty();
+           });
+       
+          /************La Carte******/
+          
+       $(document).ready(function(e) {
+           $('img[usemap]').rwdImageMaps();
+       
+       });
+       
+        
+       </script>
+       
+       <div id="quatre">
+           <span data-culture="theatre">
+               <p>Le théâtre japonais est divisé en plusieurs genres traditionnels apparu au fil de l’âge. Ils contiennent tous plusieurs pièces et sont jouées sur une journée dans leur forme traditionnelle. Le théâtre Nô, le drame lyrique, vint d’une conception religieuse et aristocratique de la vie.</p>
+           </span>
+           <span data-culture="religion">
+               <p>Les deux principales religions au Japon sont le shintoïsme et le bouddhisme. Le bouddhisme a été importé de de Chine et de Corée à partir du Vème et VIème siècle. Le Japon compte environ 76 000 temples bouddhistes. De nos jours, la plupart des japonais ont une vision neutre de la religion.</p>
+           </span>
+           <span data-culture="calligraphie">
+               <p>La calligraphie japonaise est appelée le Shodô. C’est un art traditionnel d’écriture au Japon. Son origine vient de Chine, le pays qui a importé l’écriture au Japon. Cet art possède un sens philosophique souvent influencé par le bouddhisme. De nos jours, les cours de calligraphie sont obligatoires dans les écoles japonaises.</p>
+           </span>
+           <span data-culture="vetements">
+               <p>Les deux vêtements traditionnels japonais les plus populaires sont les kimono et les yukata. Le kimono est aujourd’hui porté pour apporter formalité et élégance lors d'événements spéciaux, comme les mariages par exemple. Il sert également de vêtement de travail pour les prêtres shinto, les geisha et les artistes traditionnels.</p>
+           </span>
+           
+           </div>
     
 </body>
+<footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.rwdImageMaps.js"></script>
+</footer>
 </html>

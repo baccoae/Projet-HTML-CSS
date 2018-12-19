@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*********************APRES LE RESET*****************************/
+
+/**************************POP UP SECTION1***************************/
+/*https://codepen.io/imprakash/pen/GgNMXO*/
+
+
+/***La carte********/
+
+#carte{
+  background-color: #8ad0e5;
+  padding:10%;
+}
+
+.map{
+  height: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#japoncarte{
+  max-width: 100%;
+  width:auto;
+  height: 38em;
+}
+ 
+
+/*La pop-up*/
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+  }
+  
+  .overlay { 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index:5;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 85%;
+    height: 80%;
+    position: relative;
+    display :flex;
+    align-items : center;
+    justify-content:center;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .popup .content {
+    max-height: 98%;
+    overflow: auto;
+    display:flex;
+    flex-direction: row;
+    width:95%; 
+    position :relative;
+  }
+
+.text{
+    text-align: justify;
+    width:40%;
+    margin-left:3vw;
+}
+
+.text h2{
+  text-align: center;
+}
+
+.owl-demo{
+  width:50%;
+}
+
+#owl-demo, #owl-demo2, #owl-demo3, #owl-demo4, #owl-demo5, #owl-demo6, #owl-demo7, #owl-demo8, #owl-demo9, #owl-demo10{
+  width:50%;
+}
+
+
+  @media screen and (max-width: 850px){
+
+    .box{
+      width: 99%;
+    }
+
+    .popup .content{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text{
+      width:95%;
+    }
+
+    .popup{
+      height: 95%;
+      width: 99%;
+      margin:3%;
+      display:block;
+    }
+
+    .close{
+      color:white;
+    }
+
+    #owl-demo, #owl-demo2, #owl-demo3, #owl-demo4, #owl-demo5, #owl-demo6, #owl-demo7, #owl-demo8, #owl-demo9, #owl-demo10{
+      width:100%;
+      
+    }
+
+  }
+    
+
+  /*********************SECTION 2*************************/
+
+  .ancestrale{
+    margin:5%;
+  }
+
+  .ancestrale h2{
+    text-align: center;
+    position: relative;
+  }
+
+  .ancestrale img{
+    overflow: none; /*pour que l'image dépasse pas du cadre*/
+    height : 100%;
+    max-height:250px;
+    object-fit: cover;
+    transform:scale(0.8);
+    transform-origin: center center;
+    transition:transform .5s;
+  }
+
+  .partie{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*l'image + titre*/
+  .over{
+    display:flex;
+    justify-content: center;
+  }
+
+  .over:hover img{
+    transform:scale(1);
+    filter:blur(1.2px);
+  }
+
+  .over p:first-of-type{
+    position:absolute;
+    visibility:hidden;
+  }
+
+  .over:hover p:first-of-type{
+    visibility: visible;
+    margin:20px;
+    padding-right: 20px;
+    animation:none;
+    align-self: center;
+    z-index: 20;
+    position: absolute;
+  }
+
+  .premier, .deuxieme{
+    position:relative;
+    flex-grow: 1;
+  }
+
+  .premier p, .deuxieme p{
+    position:absolute;
+    right: 11%;
+    top: 25%;
+    width: 80%;
+    text-align: center;
+  }
+
+  #quatre{
+    display:none;
+  }
+
+
+  .citation, .citation1, .citation2, .citation3, .citation4{
+    text-align: center;
+    font-style: italic;
+  }
+
+  .citation1, .citation2, .citation3, .citation4{
+    visibility:hidden;
+    position:absolute;
+  }
+
+  @media screen and (max-width: 1120px){
+    .ancestrale{
+      margin:2%;
+    }
+
+    .premier, .deuxieme{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .premier p, .deuxieme p{
+      top:15%;
+      width:90%;
+      flex-direction: column;
+      flex-grow: 2;
+    }
+
+    .vide{
+      height:3em;
+    }
+  }
+
+  @media screen and (max-width: 1060px){
+  
+    .partie{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .premier p, .deuxieme p{
+      position :relative;
+      align-self:center;
+      left : 10%;
+    }
+
+    .vide{
+      height:3em;
+    }
+
+  }
