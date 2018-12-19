@@ -8,6 +8,10 @@
     justify-content: flex-start;
 }
 
+.hamburger {
+    visibility: hidden;
+}
+
 .footer-content {
     height: 20vh;
     width: 60vw;
@@ -30,4 +34,20 @@
 data-section-name[sec5] {
     width: 100%;
     height: 1500px;
+}
+
+/* MEDIA QUERY FOR MOBILE DISPLAYS ======================================================== */
+
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) 
+{
+
+    .hamburger {
+        visibility: visible;
+    }
+
+    .nav {
+        visibility: hidden;
+    }
 }
