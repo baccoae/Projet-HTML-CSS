@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="WowJs/WowJs/css/libs/animate.css">
     <link rel="stylesheet" href="WowJs/WowJs/css/site.css">
     <link rel="stylesheet" href="css/contemporary.css">
+    <script src="InView/jquery.inview-master/jquery.inview-master/jquery.inview.min.js"></script>
 
 </head>
 
 <body>
-
+<div style="height:1000px"></div>
         <div id="box">
                 <img id="myDiv" src="http://www.cadeau-maestro.com/1847-7362-thickbox_default/recharge-plante-click-and-grow-.jpg"
                     width="300" />
@@ -68,6 +69,17 @@
 
     <script src="WowJs/WowJs/dist/wow.js"></script>
     <script>
+
+$(document).ready(function(){
+   $('#myDiv').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+ 
+      if (isInView) {
+        $('html').css('overflow-y',"hidden");
+      }
+
+
+    });
+});
         wow = new WOW(
             {
                 animateClass: 'animated',
@@ -158,6 +170,8 @@ function wheelScript(e){
         $('#myDiv').css('opacity',calculOpacity);
     }
 }
+
+
 
 
         /*$(function () {
