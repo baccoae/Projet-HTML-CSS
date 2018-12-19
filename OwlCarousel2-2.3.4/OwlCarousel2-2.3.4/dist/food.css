@@ -57,3 +57,156 @@
     to {opacity:1;}
 }
 
+.carre{
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 600px) {
+
+    .carre{
+        width: 34vw;
+        height: 34vw;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .carre{
+        width: 7vw;
+        height: 7vw;
+    }
+
+}
+
+#myLittleCarousel{
+    /*transform: rotate(180deg) scale(0.6);*/
+    transform: scale(0.6);
+    /*margin-bottom: 5%;*/
+    
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 600px) {
+  
+    #myLittleCarousel{
+        
+        display: none;
+        
+    }
+    
+  }
+
+@media (min-width: 600px) {
+
+#myBigCarousel{
+    transform: rotate(180deg);
+    /*margin-bottom: 5%;*/
+    
+}
+
+}
+
+.little{
+    /*transform: rotate(180deg);*/ 
+}
+
+
+@media (min-width: 600px) {
+    .littleBig{
+        transform: rotate(180deg);
+    }
+}
+
+.rouge{
+    background: red;
+}
+
+.bleu{
+    background: blue;
+}
+
+.owl-carousel{
+    overflow: hidden;
+}
+
+
+
+.buttons{
+    position: absolute;
+    z-index: 2;
+}
+
+@media (max-width: 600px) {
+    .buttons{
+        display:none;
+    }
+}
+
+#left{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+
+#stop{
+    margin-left:48vw;
+    margin-top:0%;
+}
+
+#right{
+    margin-top: 2%;
+    margin-left: 75%;
+}
+
+/*.owl-item{
+    width : 20%;
+}*/
+
+#definition{
+    display: none;
+}
+
+#description-box{
+    margin-left: 36.5%;
+    margin-top: 7.5%;
+}
+
+@media (max-width: 1000px) {
+    #description-box{
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 600px) {
+    #description-box{
+        margin-left: 0%;
+    }
+}
+
+.owl-stage-outer{
+   width: 50%;
+    margin-left: 25%;
+}
+
+@media (max-width: 600px) {
+    .owl-stage-outer{
+        margin-top: 20%;
+        width: 85%;
+         margin-left: 7.5%;
+     }
+}
+
+.owl-stage{
+    /*width:50%;
+    width: 3400px !important;*/
+}
+
+.owl-carousel .owl-item {
+    /*width: 8vh !important;*/
+}
+
