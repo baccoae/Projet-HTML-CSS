@@ -1,5 +1,5 @@
 /* Popup container */
-.popup {
+.popupFood {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -188,13 +188,13 @@
     }
 }
 
-.owl-stage-outer{
+#nourriture .owl-stage-outer{
    width: 50%;
     margin-left: 25%;
 }
 
 @media (max-width: 600px) {
-    .owl-stage-outer{
+    #nourriture .owl-stage-outer{
         margin-top: 20%;
         width: 85%;
          margin-left: 7.5%;

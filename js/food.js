@@ -24,7 +24,7 @@ $().ready(function(){
         popup.classList.toggle("show");
     });*/
 
-$(".popup").click(function(){
+$(".popupFood").click(function(){
     
     console.log($(this));
     console.log($(this).attr('id'));
