@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style-nav.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style-footer.css" />
+    <title>Test Footer</title>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="element">
+            <div class="trait"></div>
+            <a href="#">
+                <p id="sec-change1">歓迎</p>
+            </a>
+        </div>
+        <div class="element">
+            <div class="trait"></div>
+                <a href="#">
+                <p id="sec-change2">発見</p>
+            </a>
+        </div>
+        <div class="element">
+            <div class="trait"></div>
+            <a href="#">
+                <p id="sec-change3">食べ物</p>
+            </a>
+        </div>
+        <div class="element">    
+            <div class="trait"></div>
+            <a href="#">
+                <p id="sec-change4">先祖</p>
+            </a>
+        </div>
+        <div class="element">
+            <div class="trait"></div>
+            <a href="#">
+                <p id="sec-change5">現在</p>
+            </a>
+        </div>
+    </div>
+<div id="dust"></div>
+    <section class="test video" data-section-name="sec1" data-backg="test1">
+        <video autoplay="autoplay" loop="loop" src="video/fishbg.mp4"></video>
+        <h1 class="titre1">DISCOVER</h1>
+        <h1 class="titre2">JAPAN</h1>
+    </section>
+
+    <section class="test" data-section-name="sec2" data-backg="test2">
+        <h1>Ceci est la section "Découvrir"</h1>
+        </section>
+        
+    <section class="test" data-section-name="sec3" data-backg="test3">
+        <h1>Ceci est la section "Nourriture"</h1>
+    </section>
+
+    <section class="test" data-section-name="sec4" data-backg="test4">
+        <h1>Ceci est la section "Ancestral"</h1>
+    </section>
+
+    <section class="test bite" data-section-name="sec5" data-backg="test5">
+        <h1>Ceci est la section "Contemporain"</h1>
+        <div class="content"></div>
+
+        <div class="footer-content">
+            <div class="left-column">
+                <p>Revenir à une section</p>
+                <p>Section 1</p>
+                <p>Section 2</p>
+                <p>Section 3</p>
+                <p>Section 4</p>
+            </div>
+            <div class="right-column">
+                <p>Test</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="library/TweenMax.min.js"></script>
+    <script src="library/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+    <script text="javascript" src="js/scroll.js"></script>
+    <script text="javascript" src="js/particles.js"></script>
+    <script text="javascript" src="js/scramble.js"></script>
+
+    <script>
+
+        $(function () {
+            $.scrollify({
+                section: ".test",
+            });
+        });
+    
+    </script>
+
+</body>
+</html>
